@@ -8,7 +8,7 @@
 	- [Java Packages and Comments](/curriculum/introduction/packages_and_comments.md)
 	- [Variable Types and Number Formats](/curriculum/introduction/types_and_identifiers.md)
 	- [Operators](/curriculum/introduction/operators.md)
-	- [Input/Output]()
+	- [Input/Output](/curriculum/introduction/io.md)
 	- [Control Structures - Conditionals and Loops]()
 	- [Exception Handling]()
 	- [Test Your Knowledge]()

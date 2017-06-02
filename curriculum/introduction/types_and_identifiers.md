@@ -55,6 +55,7 @@ Java uses bits(binary digits) to store integer values.
 
 	![alt Oops something went wrong. Please reload](../../images/chapter_1/binary_hex_table.png "Title")
 
+
 	```
 	5 (hex) = 0101 (bin)
 	0 (hex) = 0000 (bin)
