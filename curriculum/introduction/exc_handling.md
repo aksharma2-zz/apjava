@@ -30,28 +30,29 @@ As we go through the course, we will be covering all these exceptions one by one
 
 *** How to handle exception ***
 
-	1. Using throw - breaks the execution flow
+1. Using throw - breaks the execution flow
 
-		```
+```
 		if(divisor == 0){
 			throw new ArithmeticException("Cannot divide by zero");
 		}
-		```
+```
 
-	2. Using throws - Used while defining a method to indicate that the method might throw this kind of exception and is useful for handling Checked Exceptions
+2. Using throws - Used while defining a method to indicate that the method might throw this kind of exception and is useful for handling Checked Exceptions
 
-		```
+```
 		class Employee{
 			public int getSalary() throws MyPersonalException{
 				if(salary==0)
 					throw MyPersonalException("What kind of job pays 0 salary?");
 			}
 		}
-		```
+```
 
-	3. Using try catch - try is used to detect sensitive and potential exceptions while catch is used to handle a particular exception if detected within try catch block and provide action to determine outcome of such an exception event. For eg.
 
-	```
+3. Using try catch - try is used to detect sensitive and potential exceptions while catch is used to handle a particular exception if detected within try catch block and provide action to determine outcome of such an exception event. For eg.
+
+```
 	int x;
 	try{
 		 x = 5/0;
@@ -59,13 +60,13 @@ As we go through the course, we will be covering all these exceptions one by one
 		System.out.print("Cannot be divided by 0");
 		x=0;
 	}
-	```
+```
 
 The *final*, The *finally* and The *finalize* - Dont get confused with these!
 
-	* final - used to make constants
-	* finally - used to execute action after try catch block ends whether exception is caught or not
-	* finalize - method to force manual garbage collection to clean an object when there are no more references to it (Please read more online if you are interested)
+* final - used to make constants
+* finally - used to execute action after try catch block ends whether exception is caught or not
+* finalize - method to force manual garbage collection to clean an object when there are no more references to it (Please read more online if you are interested)
 
 
 

@@ -8,7 +8,7 @@ double x = IO.readDouble(); // get user input
 
 *** Output ***
 
-	The two main ways to display output is by **System.out.print()** and **System.out.println()** where the latter adds a new line break after every argument while the former does not. In Java, everything can be printed even null values and errors provided we know how to print them.
+The two main ways to display output is by **System.out.print()** and **System.out.println()** where the latter adds a new line break after every argument while the former does not. In Java, everything can be printed even null values and errors provided we know how to print them.
 
 	```
 	System.out.print("Hello");

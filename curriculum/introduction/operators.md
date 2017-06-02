@@ -2,12 +2,13 @@
 
 Operators are special symbols used in Java to perform certain actions on variables and values. There are 4 main types of operators in Java
 
-	* Arithmetic
-	* Logical
-	* Relational
-	* Assignment
+* Arithmetic
+* Logical
+* Relational
+* Assignment
 
-1. *Arithmetic Operators*
+
+1.	**Arithmetic Operators**
 	
 	These operators are used for mathematical operations as shown in the table below
 
@@ -20,13 +21,15 @@ Operators are special symbols used in Java to perform certain actions on variabl
 	12%5 = 2 // obtain remainer
 	-5%2 = -1
 	```
+	Precedence	
 
-	Precedence
-	1. () i.e. paranthesis (highest precedence)
-	2. *,/,%
-	3. +,- (lowest precedence)
+		1. () i.e. paranthesis (highest precedence)
+		
+		2. *,/,%
 
-2. *Relational Operators*
+		3. +,- (lowest precedence)
+
+2.	**Relational Operators**
 
 	Relational operators are used to evaluate checking conditions and return boolean values.
 
@@ -39,13 +42,13 @@ Operators are special symbols used in Java to perform certain actions on variabl
 	y=(x>5)?10:20 // Special ternary operator which takes 3 arguments. It checks if x is greater than 5. If true then y=10 otherwise y=20
 	```
 
-3. *Logical Operators*
+3. **Logical Operators**
 
 	Like Relational operators, logical operators also return boolean values
 
 	![alt Please reload page](../../images/chapter_1/logical_operators.png "Logical operators")
 
-	```
+	```	
 	if(x>3 && x<6)    
 		do something.  // will only do something if x>3 and also x<6. Both conditions must be true
 
@@ -54,8 +57,9 @@ Operators are special symbols used in Java to perform certain actions on variabl
 
 	if(!found)
 		do something // will only do something if the value of found is equal to false
+	```
 
-4. *Assignment Operators*
+4. **Assignment Operators**
 
 	Assignments operators are used to assign and manipulate values of variables 
 
@@ -69,6 +73,7 @@ Operators are special symbols used in Java to perform certain actions on variabl
 
 	i++ // increment operator . same as writing i=i+1 
 	i-- // decrement operator . same as writing i=i-1
+	```
 
 
 

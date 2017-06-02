@@ -1,0 +1,557 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Control Structures - Conditionals and Loops · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="exc_handling.html" />
+    
+    
+    <link rel="prev" href="io.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../communication_setup.md">
+            
+                <span>
+            
+                    
+                    Read this! Setup guide for Office Hour and other communication tools
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../curriculum.md">
+            
+                <span>
+            
+                    
+                    Curriculum
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../schedule.md">
+            
+                <span>
+            
+                    
+                    Schedule
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    Chapter 1: Introduction to Java
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="packages_and_comments.html">
+            
+                <a href="packages_and_comments.html">
+            
+                    
+                    Java Packages and Comments
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="types_and_identifiers.html">
+            
+                <a href="types_and_identifiers.html">
+            
+                    
+                    Variable Types and Number Formats
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="operators.html">
+            
+                <a href="operators.html">
+            
+                    
+                    Operators
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="io.html">
+            
+                <a href="io.html">
+            
+                    
+                    Input/Output
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.5" data-path="control_structures.html">
+            
+                <a href="control_structures.html">
+            
+                    
+                    Control Structures - Conditionals and Loops
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="exc_handling.html">
+            
+                <a href="exc_handling.html">
+            
+                    
+                    Exception Handling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" >
+            
+                <span>
+            
+                    
+                    Test Your Knowledge
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    Chapter 2: Classes and Objects
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" >
+            
+                <span>
+            
+                    
+                    []
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Control Structures - Conditionals and Loops</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p><strong> Control Structures </strong></p>
+<p>Control Structures are structures in programming languages which are used to make decisions based on user choices and actions. They are categorized mainly into</p>
+<ul>
+<li>Decision making</li>
+<li><p>Loops</p>
+</li>
+<li><p>Decision making</p>
+</li>
+</ul>
+<p>It is used to evaluate whether a condition matches a certain value and returns a boolean value using which we can carry out actions and decide which path to follow;</p>
+<pre><code>*** THE if STATEMENT ***
+
+    The if statement is executed only if the condition is true otherwise it doesn&apos;t carry out the action. For eg.
+
+    ```
+    int x = 3;
+    if(x&gt;=3){
+        System.out.print(&quot;value of x is&quot;+x);
+    }
+    System.out.print(&quot;\t End program&quot;);
+    ```
+
+    The above program prints : value of x is 3    End program 
+    This is because since x is equal to 3, if condition is satisfied and carries out the actio which is enclosed by the parantheses
+
+*** The if...else STATEMENT ***
+
+    This is an extension of if but in this case we can specify another path which the computer we can take in case our condition was not true. For eg.
+
+    ```
+    int x=5;
+    if(x&gt;10){
+        x=20;
+    }
+    else{
+        x=0;
+    }
+    System.out.print(&quot;value of x is +&quot;x); // prints value of x is 0
+    ```
+
+    *** THE if...elseif...else STATEMENT (EXTENDED if)
+
+    This is also like the previous cases except for this case we can specify multiple checking conditions. For eg.
+
+    ```
+    int x=7;
+    int y;
+
+    if(x&gt;10){
+        y=10;
+    }
+
+    else if(x&lt;20){
+        y=20;
+    }
+
+    else{
+        y=30;
+    }
+    System.out.print(&quot;value of y is &quot;+y); // prints value of y is 20
+    ```
+
+*** The NESTED if statement ***
+
+    If a statement is a part of another if statement embedded inside the latter&apos;s parantheses scope then it is known as a nested if statement. For eg.
+
+    ```
+    int x=5;
+    int y;
+    if(x&gt;0)
+        if(x%2==0)
+            y=10;
+    else
+        y=20;
+
+    System.out.print(y); // prints 20
+    ```
+
+    Beware of the example given above. It is meant to confuse you. From the indentation, it seems as if else condition is in continuum with the first if condition. However, it is continuum with the second if condition. This is because for just 1 statement after an if condition, it is not neccessary to add parantheses. However, it is a good practice to add proper indentation and parantheses to avoid these mistakes.
+
+    ```
+    int x=5;
+    int y=0;
+
+    if(x&gt;0){
+        if(x%5==0){
+            y=10;
+        }
+    } 
+    else{
+        y=20;
+    }
+
+    System.out.print(y); // prints 0 
+    ```
+
+    Now we can see, it is much more readable and the else condition is now in continuum with the first if condition. Now since the first if condition is satisfied, the else condition is never reached.
+</code></pre><ol>
+<li>Loops</li>
+</ol>
+<p>As the name sounds, Loops are control structures used to execute repeated actions until the condition is evaluated to be false. The three main types of loops are</p>
+<ul>
+<li>for LOOP</li>
+<li>while LOOP</li>
+<li><p>for each LOOP (aka enhanced for LOOP)</p>
+</li>
+<li><p>for LOOP</p>
+<p> General form is : for(<em>loop variable initilization</em>; <em>termination condition</em>; <em>update variable value</em>){ do something }
+ The termination condition is tested at the top of the loop i.e. the first step of the loop. The variable is updated at the end of the loop i.e. the last step of the loop. For eg.</p>
+<p> ```
+ for(int i=0; i&lt;5; i++){</p>
+<pre><code> System.out.print(i);
+</code></pre><p> }
+ // Prints 01234 . Take note that it does not print 5 because loop terminates as soon i becomes equal to 5 and loop works only if i is less than 5</p>
+<p> for(int index=20; index&gt;=10; index=i-2){</p>
+<pre><code> System.out.print(index+&quot; &quot;); // add extra space after every number printed 
+</code></pre><p> }
+ // Prints 20 18 16 14 12 10</p>
+</li>
+<li><p>while LOOP</p>
+<p> The loop works almost the same way like the for loop but except the syntax is different. The general form is while(<em>boolean test on variable</em>){    </p>
+<pre><code> do something
+ *update variable
+</code></pre><p> }</p>
+<p> For eg.</p>
+<p> ```
+ int index=0;
+ while(index&lt;5){</p>
+<pre><code> System.out.print(index);
+ index++;
+</code></pre><p> }</p>
+<p> // Prints 01234</p>
+</li>
+<li><p>for each LOOP</p>
+<p> To understand this loop completely, we need to cover the topic of Arrays and Collections. However, think of it is a way that given a collection of items of a similar kind, the loop automatically traverses over the collection one by one till it reaches the end. The advantage of using this loop is the relatively easy syntax but however, it restricts freedom to write code our own way as it follows a particular convention. The general form is (<em>variable</em> : <em>collection</em>){ do something } For eg.</p>
+<p> ```
+ int[]collection = {0,1,2,3,4};
+ for(int i: collection){</p>
+<pre><code> System.out.print(i);
+</code></pre><p> }</p>
+<p> // Prints 01234</p>
+</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="io.html" class="navigation navigation-prev " aria-label="Previous page: Input/Output">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="exc_handling.html" class="navigation navigation-next " aria-label="Next page: Exception Handling">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Control Structures - Conditionals and Loops","level":"1.5.5","depth":2,"next":{"title":"Exception Handling","level":"1.5.6","depth":2,"path":"curriculum/introduction/exc_handling.md","ref":"curriculum/introduction/exc_handling.md","articles":[]},"previous":{"title":"Input/Output","level":"1.5.4","depth":2,"path":"curriculum/introduction/io.md","ref":"curriculum/introduction/io.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"curriculum/introduction/control_structures.md","mtime":"2017-06-02T04:53:37.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-06-02T07:05:21.219Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

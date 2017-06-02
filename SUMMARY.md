@@ -9,8 +9,8 @@
 	- [Variable Types and Number Formats](/curriculum/introduction/types_and_identifiers.md)
 	- [Operators](/curriculum/introduction/operators.md)
 	- [Input/Output](/curriculum/introduction/io.md)
-	- [Control Structures - Conditionals and Loops]()
-	- [Exception Handling]()
+	- [Control Structures - Conditionals and Loops](/curriculum/introduction/control_structures.md)
+	- [Exception Handling](/curriculum/introduction/exc_handling.md)
 	- [Test Your Knowledge]()
 - Chapter 2: Classes and Objects
 	- []
