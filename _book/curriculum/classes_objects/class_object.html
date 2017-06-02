@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Input/Output · GitBook</title>
+        <title>Class and Object · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="control_structures.html" />
+    <link rel="next" href="access_specifiers.html" />
     
-    
-    <link rel="prev" href="operators.html" />
     
 
     </head>
@@ -155,9 +153,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.1" data-path="packages_and_comments.html">
+        <li class="chapter " data-level="1.5.1" data-path="../introduction/packages_and_comments.html">
             
-                <a href="packages_and_comments.html">
+                <a href="../introduction/packages_and_comments.html">
             
                     
                     Java Packages and Comments
@@ -168,9 +166,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.2" data-path="types_and_identifiers.html">
+        <li class="chapter " data-level="1.5.2" data-path="../introduction/types_and_identifiers.html">
             
-                <a href="types_and_identifiers.html">
+                <a href="../introduction/types_and_identifiers.html">
             
                     
                     Variable Types and Number Formats
@@ -181,9 +179,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.3" data-path="operators.html">
+        <li class="chapter " data-level="1.5.3" data-path="../introduction/operators.html">
             
-                <a href="operators.html">
+                <a href="../introduction/operators.html">
             
                     
                     Operators
@@ -194,9 +192,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.5.4" data-path="io.html">
+        <li class="chapter " data-level="1.5.4" data-path="../introduction/io.html">
             
-                <a href="io.html">
+                <a href="../introduction/io.html">
             
                     
                     Input/Output
@@ -207,9 +205,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.5" data-path="control_structures.html">
+        <li class="chapter " data-level="1.5.5" data-path="../introduction/control_structures.html">
             
-                <a href="control_structures.html">
+                <a href="../introduction/control_structures.html">
             
                     
                     Control Structures - Conditionals and Loops
@@ -220,9 +218,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.6" data-path="exc_handling.html">
+        <li class="chapter " data-level="1.5.6" data-path="../introduction/exc_handling.html">
             
-                <a href="exc_handling.html">
+                <a href="../introduction/exc_handling.html">
             
                     
                     Exception Handling
@@ -265,9 +263,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.6.1" data-path="../classes_objects/class_object.html">
+        <li class="chapter active" data-level="1.6.1" data-path="class_object.html">
             
-                <a href="../classes_objects/class_object.html">
+                <a href="class_object.html">
             
                     
                     Class and Object
@@ -278,9 +276,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.2" data-path="../classes_objects/access_specifiers.html">
+        <li class="chapter " data-level="1.6.2" data-path="access_specifiers.html">
             
-                <a href="../classes_objects/access_specifiers.html">
+                <a href="access_specifiers.html">
             
                     
                     Access Specifiers
@@ -291,9 +289,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.3" data-path="../classes_objects/methods.html">
+        <li class="chapter " data-level="1.6.3" data-path="methods.html">
             
-                <a href="../classes_objects/methods.html">
+                <a href="methods.html">
             
                     
                     Methods
@@ -339,7 +337,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >Input/Output</a>
+        <a href="../.." >Class and Object</a>
     </h1>
 </div>
 
@@ -354,41 +352,81 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p><strong> Input and Output </strong></p>
-<p>For this course, to accept arbitrary value from user it willbe displayed like</p>
-<pre><code>double x = IO.readDouble(); // get user input
-</code></pre><p><strong><em> Output </em></strong></p>
-<p>The two main ways to display output is by <strong>System.out.print()</strong> and <strong>System.out.println()</strong> where the latter adds a new line break after every argument while the former does not. In Java, everything can be printed even null values and errors provided we know how to print them.</p>
-<pre><code>```
-System.out.print(&quot;Hello&quot;);
-System.out.print(&quot;World&quot;);  
+                                <h2 id="classes-and-objects">Classes and Objects</h2>
+<p>Classes and Objects is the building block of Java and one of the most important topics. Everything in Java is considered as an Object, a single instance of a particular blueprint, a class. If you remember, the way to create integers was</p>
+<pre><code>int index = 0;
+</code></pre><p>However, the inner working of Java creates an integer in somewhat the following way</p>
+<pre><code>Integer index = new Integer(0);
+</code></pre><p>As we can see from above, our object (index variable) is a new instance of type Integer with instantiated value of 0</p>
+<p>A class can be thought of like a blueprint which defines instance variables(variables belonging to a class) and methods which will be implemented by its objects. Different objects can have different values depending by what values they are instantiated with. For eg. lets create an example of an employee blueprint and instantiate different employees. A variable that represents an object is known as object reference</p>
+<pre><code>class Employee{
 
-// prints Hello World
+    private String name;
+    private String EID;
+    private double sal;
+    private boolean isManager;
+    private static int companyCommission = 500; 
 
-System.out.println(&quot;Hello&quot;);
-System.out.println(&quot;World&quot;);
+    public Employee(){        // Constructor 1 i.e. default constructor
+        name = &quot;John Doe&quot;;
+        EID = &quot;123&quot;;
+        sal = 1000;
+        isManager = false;
+    }
 
-//prints Hello
-         World
+    public Employee(String name, String EID, double sal, boolean isManager){    // Constructor 2 i.e. parameterized constructor
+        this.name=name;
+        this.EID=EID;
+        this.sal=sal;
+        this.isManager=isManager;
+    }
 
-System.out.print( (8 == (4+3)) ) // prints false because 8 &lt;&gt; 7
+    public double getSal(){    //getter aka accessor method
+        return sal;
+    }
 
-int x=3;
-System.out.print(&quot;My value is&quot;+x)l // prints My value is 3
+    public void setSal(double newSal){    //setter aka mutator method
+        this.sal = newSal;
+    }
 
-```
-</code></pre><p><strong><em> Special Escape characters </em></strong></p>
-<pre><code>Special characters which have a backslash followed by a single character
+    public void setSal(double newSal, int bonus){ // overloaded method
+        this.sal = newSal + (newSal * bonus);
+    }
 
-* \n - new line or line break
-* \&quot; - add a double quote to be printed
-* \\ - backslash
-</code></pre><pre><code>System.out.print(&quot;Hello \n World&quot;);
-// prints Hello
-          World
+    public void setCommission(int newComm){ // setter #2
+        if(isManager) // same as writing isManager==true . only if employee object is a manager, he can change commission
+            companyCommission = newComm;
+    }
 
-System.out print(&quot;Here is \&quot; Harry Hacker\&quot; &quot;); // prints Here is &quot;Harry Hacker&quot;
-</code></pre>
+    public int getCommission(){    //getter #2
+        return companyCommission;
+    }
+
+    public static void changeCommission(int newComm){
+        companyCommission = newComm;
+    }
+}
+
+Employee default = new Employee(); // &apos;default&apos; object reference instantiated with no values hence will take default values from Constructor 1
+
+Employee mike = new Employee(&quot;Mike&quot;, &quot;456&quot;, 20000, false); // &apos;mike&apos; object reference instantiated with user defined values so Constructor 2 will execute in this case
+
+Employee trump = new Employee(&quot;Trump&quot;, &quot;999&quot;, 100000, true); // &apos;trump&apos; object reference instantiated with user defined values
+mike.setSal(30000); // new Salary for mike
+trump.setSal(120000, 0.2); // new Salary for trump along with bonus
+
+trump.setCommission(1000);
+System.out.print(mike.getCommission()); // prints 1000;
+
+mike.setCommission(1500);
+System.out.print(mike.getCommission()); // prints 1000 (value doesnt change to 1500) . Mike is not a manager so he cannot change commission.
+
+trump.setCommission(2000);
+System.out.print(default.getCommission()); // prints 2000;
+
+Employee.changeCommission(3000); // commission is now 3000
+</code></pre><p>As we go through the chapter, we will keep this example and discuss it further.</p>
+
                                 
                                 </section>
                             
@@ -415,12 +453,8 @@ System.out print(&quot;Here is \&quot; Harry Hacker\&quot; &quot;); // prints He
 
             
                 
-                <a href="operators.html" class="navigation navigation-prev " aria-label="Previous page: Operators">
-                    <i class="fa fa-angle-left"></i>
-                </a>
                 
-                
-                <a href="control_structures.html" class="navigation navigation-next " aria-label="Next page: Control Structures - Conditionals and Loops">
+                <a href="access_specifiers.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Access Specifiers">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -431,7 +465,7 @@ System.out print(&quot;Here is \&quot; Harry Hacker\&quot; &quot;); // prints He
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Input/Output","level":"1.5.4","depth":2,"next":{"title":"Control Structures - Conditionals and Loops","level":"1.5.5","depth":2,"path":"curriculum/introduction/control_structures.md","ref":"curriculum/introduction/control_structures.md","articles":[]},"previous":{"title":"Operators","level":"1.5.3","depth":2,"path":"curriculum/introduction/operators.md","ref":"curriculum/introduction/operators.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"curriculum/introduction/io.md","mtime":"2017-06-02T07:00:48.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-06-02T08:38:59.607Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Class and Object","level":"1.6.1","depth":2,"next":{"title":"Access Specifiers","level":"1.6.2","depth":2,"path":"curriculum/classes_objects/access_specifiers.md","ref":"curriculum/classes_objects/access_specifiers.md","articles":[]},"previous":{"title":"Chapter 2: Classes and Objects","level":"1.6","depth":1,"ref":"","articles":[{"title":"Class and Object","level":"1.6.1","depth":2,"path":"curriculum/classes_objects/class_object.md","ref":"curriculum/classes_objects/class_object.md","articles":[]},{"title":"Access Specifiers","level":"1.6.2","depth":2,"path":"curriculum/classes_objects/access_specifiers.md","ref":"curriculum/classes_objects/access_specifiers.md","articles":[]},{"title":"Methods","level":"1.6.3","depth":2,"path":"curriculum/classes_objects/methods.md","ref":"curriculum/classes_objects/methods.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"curriculum/classes_objects/class_object.md","mtime":"2017-06-02T11:17:35.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-06-02T08:38:59.607Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

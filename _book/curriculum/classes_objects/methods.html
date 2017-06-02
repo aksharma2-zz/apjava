@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Input/Output · GitBook</title>
+        <title>Methods · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="control_structures.html" />
     
-    
-    <link rel="prev" href="operators.html" />
+    <link rel="prev" href="access_specifiers.html" />
     
 
     </head>
@@ -155,9 +153,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.1" data-path="packages_and_comments.html">
+        <li class="chapter " data-level="1.5.1" data-path="../introduction/packages_and_comments.html">
             
-                <a href="packages_and_comments.html">
+                <a href="../introduction/packages_and_comments.html">
             
                     
                     Java Packages and Comments
@@ -168,9 +166,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.2" data-path="types_and_identifiers.html">
+        <li class="chapter " data-level="1.5.2" data-path="../introduction/types_and_identifiers.html">
             
-                <a href="types_and_identifiers.html">
+                <a href="../introduction/types_and_identifiers.html">
             
                     
                     Variable Types and Number Formats
@@ -181,9 +179,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.3" data-path="operators.html">
+        <li class="chapter " data-level="1.5.3" data-path="../introduction/operators.html">
             
-                <a href="operators.html">
+                <a href="../introduction/operators.html">
             
                     
                     Operators
@@ -194,9 +192,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.5.4" data-path="io.html">
+        <li class="chapter " data-level="1.5.4" data-path="../introduction/io.html">
             
-                <a href="io.html">
+                <a href="../introduction/io.html">
             
                     
                     Input/Output
@@ -207,9 +205,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.5" data-path="control_structures.html">
+        <li class="chapter " data-level="1.5.5" data-path="../introduction/control_structures.html">
             
-                <a href="control_structures.html">
+                <a href="../introduction/control_structures.html">
             
                     
                     Control Structures - Conditionals and Loops
@@ -220,9 +218,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.6" data-path="exc_handling.html">
+        <li class="chapter " data-level="1.5.6" data-path="../introduction/exc_handling.html">
             
-                <a href="exc_handling.html">
+                <a href="../introduction/exc_handling.html">
             
                     
                     Exception Handling
@@ -265,9 +263,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.6.1" data-path="../classes_objects/class_object.html">
+        <li class="chapter " data-level="1.6.1" data-path="class_object.html">
             
-                <a href="../classes_objects/class_object.html">
+                <a href="class_object.html">
             
                     
                     Class and Object
@@ -278,9 +276,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.2" data-path="../classes_objects/access_specifiers.html">
+        <li class="chapter " data-level="1.6.2" data-path="access_specifiers.html">
             
-                <a href="../classes_objects/access_specifiers.html">
+                <a href="access_specifiers.html">
             
                     
                     Access Specifiers
@@ -291,9 +289,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.3" data-path="../classes_objects/methods.html">
+        <li class="chapter active" data-level="1.6.3" data-path="methods.html">
             
-                <a href="../classes_objects/methods.html">
+                <a href="methods.html">
             
                     
                     Methods
@@ -339,7 +337,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >Input/Output</a>
+        <a href="../.." >Methods</a>
     </h1>
 </div>
 
@@ -354,41 +352,53 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p><strong> Input and Output </strong></p>
-<p>For this course, to accept arbitrary value from user it willbe displayed like</p>
-<pre><code>double x = IO.readDouble(); // get user input
-</code></pre><p><strong><em> Output </em></strong></p>
-<p>The two main ways to display output is by <strong>System.out.print()</strong> and <strong>System.out.println()</strong> where the latter adds a new line break after every argument while the former does not. In Java, everything can be printed even null values and errors provided we know how to print them.</p>
-<pre><code>```
-System.out.print(&quot;Hello&quot;);
-System.out.print(&quot;World&quot;);  
+                                <h2 id="methods">Methods</h2>
+<p>Functions are called as methods in Java and perform a certain set of tasks whose implementation is provided by the user. For our Employee example, there were many methods like - setSal, getSal, setCommission, etc. Most methods have the following format</p>
+<pre><code>&lt;*access specifier*&gt; &lt;*return type*&gt; &lt;*method name*&gt; &lt;*parameter list*&gt;
+</code></pre><p>For eg. in our case,</p>
+<pre><code>public void setSal(double newSal){    // header of method
+        this.sal = newSal; // implementation of method from here onwards
+    }
+</code></pre><ul>
+<li><p>the return type specifier what value is to be returned (like int, double,etc.). For our case, we do not want to return a value but 
+we just want to change the value of salary to a new value hence we return &quot;void&quot; i.e. nothing</p>
+</li>
+<li><p>the parameter list specifies the arguments we provide. For our case, we provided double newSal</p>
+</li>
+</ul>
+<h3 id="method-types">Method Types</h3>
+<ul>
+<li><h3 id="constructors">Constructors</h3>
+</li>
+</ul>
+<p>A constructor method creates an object of a class. A constructor will always have the same name as that of the class and does not have a return type. For our case, we had two different constructor, one without parameters and one with parameters. The constructor without parameters is known as a <em>default constructor</em>. The one with parameters is known as a <em>parameterized constructor</em>. If we dont create a default constructor, Java will automatically create a default empty constructor. All Strings are assigned blanks values, numbers are assigned 0 and booleans are assigned false by the default constructor. </p>
+<p>The following visualization is provided for your understanding</p>
+<p><img src="../../images/chapter_2/object_memory.png" alt="alt &quot;please reload page&quot;" title="object_memory_reference"></p>
+<p>As seen above, both objects share same memory reference to static variable companyCommission</p>
+<ul>
+<li><h3 id="getters">Getters</h3>
+</li>
+</ul>
+<p>These methods are also known as accessor methods and are used to return some information regarding the state of the instance variables <strong>without</strong> altering them. For our case, we had the getSal and getCommission methods which returned the salary and commission of each employee</p>
+<ul>
+<li><h3 id="setters">Setters</h3>
+</li>
+</ul>
+<p>These methods are also known as mutator methods and generally have void return types i.e. they do not return anything. Their main objective is to change the state of the instance variables. For our case, we had the setSal and setCommission which enabled Employee objects to change the sal value and companyCommission value (however companyCommission could only be changed by a manager)</p>
+<ul>
+<li><h3 id="overloaded-methods">Overloaded methods</h3>
+</li>
+</ul>
+<p>Multiple methods can have the same name but must have different signatures i.e. different parameters. For our case, we had two setSal methods but they had different parameters(either number or type is different). An example of how to use them is </p>
+<p>```
+mike.setSal(30000); // mike&apos;s salary is now 30000
+mike.setSal(30000,0.1) // mike&apos;s salary is now 33000</p>
+<ul>
+<li><h3 id="static-methods">Static methods</h3>
+</li>
+</ul>
+<p>Static methods are methods which belong to the entire class and perform operations for the entire class and not just for individual objects. To declare static methods we need to add <em>static</em> keyword to our method. Please note that a static method cannot access/utilize an instance variable and it will cause a compilation error. However, static methods are allowed to use static variables. <strong>Objects of the class</strong> can use both static variables(if they are public) and static methods and any change to static variables by Class objects will cause the changes to be reflected across for all objects and the class. As seen in our example, the Employee class used the static method changeCommission to change the value of the static variable companyCommission</p>
 
-// prints Hello World
-
-System.out.println(&quot;Hello&quot;);
-System.out.println(&quot;World&quot;);
-
-//prints Hello
-         World
-
-System.out.print( (8 == (4+3)) ) // prints false because 8 &lt;&gt; 7
-
-int x=3;
-System.out.print(&quot;My value is&quot;+x)l // prints My value is 3
-
-```
-</code></pre><p><strong><em> Special Escape characters </em></strong></p>
-<pre><code>Special characters which have a backslash followed by a single character
-
-* \n - new line or line break
-* \&quot; - add a double quote to be printed
-* \\ - backslash
-</code></pre><pre><code>System.out.print(&quot;Hello \n World&quot;);
-// prints Hello
-          World
-
-System.out print(&quot;Here is \&quot; Harry Hacker\&quot; &quot;); // prints Here is &quot;Harry Hacker&quot;
-</code></pre>
                                 
                                 </section>
                             
@@ -415,14 +425,10 @@ System.out print(&quot;Here is \&quot; Harry Hacker\&quot; &quot;); // prints He
 
             
                 
-                <a href="operators.html" class="navigation navigation-prev " aria-label="Previous page: Operators">
+                <a href="access_specifiers.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Access Specifiers">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="control_structures.html" class="navigation navigation-next " aria-label="Next page: Control Structures - Conditionals and Loops">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -431,7 +437,7 @@ System.out print(&quot;Here is \&quot; Harry Hacker\&quot; &quot;); // prints He
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Input/Output","level":"1.5.4","depth":2,"next":{"title":"Control Structures - Conditionals and Loops","level":"1.5.5","depth":2,"path":"curriculum/introduction/control_structures.md","ref":"curriculum/introduction/control_structures.md","articles":[]},"previous":{"title":"Operators","level":"1.5.3","depth":2,"path":"curriculum/introduction/operators.md","ref":"curriculum/introduction/operators.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"curriculum/introduction/io.md","mtime":"2017-06-02T07:00:48.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-06-02T08:38:59.607Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Methods","level":"1.6.3","depth":2,"previous":{"title":"Access Specifiers","level":"1.6.2","depth":2,"path":"curriculum/classes_objects/access_specifiers.md","ref":"curriculum/classes_objects/access_specifiers.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"curriculum/classes_objects/methods.md","mtime":"2017-06-02T11:18:29.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-06-02T08:38:59.607Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

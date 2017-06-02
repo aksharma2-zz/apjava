@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Input/Output · GitBook</title>
+        <title>Access Specifiers · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="control_structures.html" />
+    <link rel="next" href="methods.html" />
     
     
-    <link rel="prev" href="operators.html" />
+    <link rel="prev" href="class_object.html" />
     
 
     </head>
@@ -155,9 +155,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.1" data-path="packages_and_comments.html">
+        <li class="chapter " data-level="1.5.1" data-path="../introduction/packages_and_comments.html">
             
-                <a href="packages_and_comments.html">
+                <a href="../introduction/packages_and_comments.html">
             
                     
                     Java Packages and Comments
@@ -168,9 +168,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.2" data-path="types_and_identifiers.html">
+        <li class="chapter " data-level="1.5.2" data-path="../introduction/types_and_identifiers.html">
             
-                <a href="types_and_identifiers.html">
+                <a href="../introduction/types_and_identifiers.html">
             
                     
                     Variable Types and Number Formats
@@ -181,9 +181,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.3" data-path="operators.html">
+        <li class="chapter " data-level="1.5.3" data-path="../introduction/operators.html">
             
-                <a href="operators.html">
+                <a href="../introduction/operators.html">
             
                     
                     Operators
@@ -194,9 +194,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.5.4" data-path="io.html">
+        <li class="chapter " data-level="1.5.4" data-path="../introduction/io.html">
             
-                <a href="io.html">
+                <a href="../introduction/io.html">
             
                     
                     Input/Output
@@ -207,9 +207,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.5" data-path="control_structures.html">
+        <li class="chapter " data-level="1.5.5" data-path="../introduction/control_structures.html">
             
-                <a href="control_structures.html">
+                <a href="../introduction/control_structures.html">
             
                     
                     Control Structures - Conditionals and Loops
@@ -220,9 +220,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.6" data-path="exc_handling.html">
+        <li class="chapter " data-level="1.5.6" data-path="../introduction/exc_handling.html">
             
-                <a href="exc_handling.html">
+                <a href="../introduction/exc_handling.html">
             
                     
                     Exception Handling
@@ -265,9 +265,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.6.1" data-path="../classes_objects/class_object.html">
+        <li class="chapter " data-level="1.6.1" data-path="class_object.html">
             
-                <a href="../classes_objects/class_object.html">
+                <a href="class_object.html">
             
                     
                     Class and Object
@@ -278,9 +278,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.2" data-path="../classes_objects/access_specifiers.html">
+        <li class="chapter active" data-level="1.6.2" data-path="access_specifiers.html">
             
-                <a href="../classes_objects/access_specifiers.html">
+                <a href="access_specifiers.html">
             
                     
                     Access Specifiers
@@ -291,9 +291,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.3" data-path="../classes_objects/methods.html">
+        <li class="chapter " data-level="1.6.3" data-path="methods.html">
             
-                <a href="../classes_objects/methods.html">
+                <a href="methods.html">
             
                     
                     Methods
@@ -339,7 +339,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >Input/Output</a>
+        <a href="../.." >Access Specifiers</a>
     </h1>
 </div>
 
@@ -354,41 +354,29 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p><strong> Input and Output </strong></p>
-<p>For this course, to accept arbitrary value from user it willbe displayed like</p>
-<pre><code>double x = IO.readDouble(); // get user input
-</code></pre><p><strong><em> Output </em></strong></p>
-<p>The two main ways to display output is by <strong>System.out.print()</strong> and <strong>System.out.println()</strong> where the latter adds a new line break after every argument while the former does not. In Java, everything can be printed even null values and errors provided we know how to print them.</p>
-<pre><code>```
-System.out.print(&quot;Hello&quot;);
-System.out.print(&quot;World&quot;);  
+                                <h2 id="access-specifiers">Access Specifiers</h2>
+<p>Access Specifiers are used to define access to variables and methods (whether it is free or restricted)
+The three main types of access specifiers are</p>
+<ul>
+<li>Private - variables and private methods can only can only accessed by methods of that class. They belong to the class only.</li>
+<li>Public - public variables and methods can be accessed from anywhere and by anyone.</li>
+<li>Protected - protected methods can be accessed by classes within same package or classes in a different package but inherit the class</li>
+</ul>
+<p>For this course, we will cover the first two access specifiers only. Lets consider our previous Employee example</p>
+<ol>
+<li><p>All the private instance variables are used directly only by the methods defined for the Employee class. Even objects of class Employee cannot use these private instance variables directly.</p>
+</li>
+<li><p>All objects of Employee class can access any public method defined by the class. For eg. trump object reference could call setSal method and change its assigned salary to a new salary. If a public instance variable was declared by the class, then the object could directly access and modify the variable. However, this is generally avoided such that an outside client cannot directly change the value of a variable to an arbitrary pre chosen value. He should be allowed to only interact with methods which carry out particular tasks. This concept is known as <strong>Data Encapsulation</strong> which is the process of hiding inner implementation details to the outside world.</p>
+</li>
+<li><p><em>Static variables</em> are a special type of variable which belong to the class and are shared across all objects of the class. It is called static because it is created only once. Some uses for making static variables are</p>
+<ul>
+<li>keep track of total number of objects</li>
+<li>accumalate a total</li>
+</ul>
+</li>
+</ol>
+<p>For our case, our static variable was companyCommission and is shared across all Employee objects. Static variables are accessible to non static methods. What this means is that all Employee objects can access companyCommission variable as long as they have a public method which can access it. As we can see from implementation of setCommission method, only if an Employee object is a manager, he can change the commission value. Hence, only trump object can change it. However, any object can access the value of companyCommission through the getCommission method.</p>
 
-// prints Hello World
-
-System.out.println(&quot;Hello&quot;);
-System.out.println(&quot;World&quot;);
-
-//prints Hello
-         World
-
-System.out.print( (8 == (4+3)) ) // prints false because 8 &lt;&gt; 7
-
-int x=3;
-System.out.print(&quot;My value is&quot;+x)l // prints My value is 3
-
-```
-</code></pre><p><strong><em> Special Escape characters </em></strong></p>
-<pre><code>Special characters which have a backslash followed by a single character
-
-* \n - new line or line break
-* \&quot; - add a double quote to be printed
-* \\ - backslash
-</code></pre><pre><code>System.out.print(&quot;Hello \n World&quot;);
-// prints Hello
-          World
-
-System.out print(&quot;Here is \&quot; Harry Hacker\&quot; &quot;); // prints Here is &quot;Harry Hacker&quot;
-</code></pre>
                                 
                                 </section>
                             
@@ -415,12 +403,12 @@ System.out print(&quot;Here is \&quot; Harry Hacker\&quot; &quot;); // prints He
 
             
                 
-                <a href="operators.html" class="navigation navigation-prev " aria-label="Previous page: Operators">
+                <a href="class_object.html" class="navigation navigation-prev " aria-label="Previous page: Class and Object">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="control_structures.html" class="navigation navigation-next " aria-label="Next page: Control Structures - Conditionals and Loops">
+                <a href="methods.html" class="navigation navigation-next " aria-label="Next page: Methods">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -431,7 +419,7 @@ System.out print(&quot;Here is \&quot; Harry Hacker\&quot; &quot;); // prints He
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Input/Output","level":"1.5.4","depth":2,"next":{"title":"Control Structures - Conditionals and Loops","level":"1.5.5","depth":2,"path":"curriculum/introduction/control_structures.md","ref":"curriculum/introduction/control_structures.md","articles":[]},"previous":{"title":"Operators","level":"1.5.3","depth":2,"path":"curriculum/introduction/operators.md","ref":"curriculum/introduction/operators.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"curriculum/introduction/io.md","mtime":"2017-06-02T07:00:48.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-06-02T08:38:59.607Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Access Specifiers","level":"1.6.2","depth":2,"next":{"title":"Methods","level":"1.6.3","depth":2,"path":"curriculum/classes_objects/methods.md","ref":"curriculum/classes_objects/methods.md","articles":[]},"previous":{"title":"Class and Object","level":"1.6.1","depth":2,"path":"curriculum/classes_objects/class_object.md","ref":"curriculum/classes_objects/class_object.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"curriculum/classes_objects/access_specifiers.md","mtime":"2017-06-02T09:24:44.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-06-02T08:38:59.607Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

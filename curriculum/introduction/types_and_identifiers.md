@@ -19,7 +19,7 @@ There are different data types of variables which Java allows us to declare whic
 
 ###	 Type Casting
 
-Type Casting is a feature used by Java which allows the compiler to change the data type of variables from one form into another. For eg., to type cast a double value into an int value. The code and their outputs are
+Type Casting is a feature used by Java which allows the compiler to change the data type of the particular value of the variable for that instance from one form into another. For eg., to type cast a double value into an int value. Please note that the actual data type of the variable doesn't change only the value which will be used will be changed. The code and their outputs are
 
 ```
 int a;

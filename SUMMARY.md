@@ -13,4 +13,6 @@
 	- [Exception Handling](/curriculum/introduction/exc_handling.md)
 	- [Test Your Knowledge]()
 - Chapter 2: Classes and Objects
-	- []
+	- [Class and Object](/curriculum/classes_objects/class_object.md)
+	- [Access Specifiers](/curriculum/classes_objects/access_specifiers.md)
+	- [Methods](/curriculum/classes_objects/methods.md)
